@@ -1,24 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="SnapMoment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E Posta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FWv-hW-CZC">
+                                <rect key="frame" x="28" y="266" width="335" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.85098040100000005" green="0.31764706970000001" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZoG-FQ-yzC">
+                                <rect key="frame" x="28" y="331" width="335" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.94509804249999996" green="0.74901962280000001" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dv-zD-HyF">
+                                <rect key="frame" x="28" y="398" width="335" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.34509804840000002" green="0.65098041299999998" blue="0.36078432199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQv-Ed-C3Q">
+                                <rect key="frame" x="114" y="469" width="162" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Giriş Yap" cornerStyle="dynamic">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7p-nc-ssD">
+                                <rect key="frame" x="28" y="463" width="335" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Giriş Yap">
+                                    <color key="baseForegroundColor" red="0.2588235438" green="0.41176474089999998" blue="0.74117654560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="SignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8R4-zW-Vy9"/>
+                                    <segue destination="rj5-0l-z7k" kind="presentation" modalPresentationStyle="fullScreen" id="Kul-TS-r5h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrV-Fp-N07">
+                                <rect key="frame" x="145" y="746" width="214" height="48"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Google ile Giriş Yap" image="GoogleButton">
+                                    <color key="titleColor" red="0.1137254902" green="0.25098040700000002" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="GoogleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gmk-dG-TDK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifP-AI-m4O">
+                                <rect key="frame" x="32" y="753" width="101" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Br7-C8-LeD"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Kayıt Ol" image="AddUser">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="RegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSX-Zt-gCl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SnapMoment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRM-L8-afL">
+                                <rect key="frame" x="28" y="118" width="335" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="yh4-mY-Icl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="28"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QRM-L8-afL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="1WP-lH-Ddo"/>
+                            <constraint firstItem="ifP-AI-m4O" firstAttribute="baseline" secondItem="OrV-Fp-N07" secondAttribute="baseline" id="3sF-EC-di9"/>
+                            <constraint firstItem="5dv-zD-HyF" firstAttribute="trailing" secondItem="V7p-nc-ssD" secondAttribute="trailing" id="6uG-gO-PYU"/>
+                            <constraint firstItem="5dv-zD-HyF" firstAttribute="leading" secondItem="V7p-nc-ssD" secondAttribute="leading" id="7iF-Dx-6a1"/>
+                            <constraint firstItem="VQv-Ed-C3Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="8Dd-cT-5rQ"/>
+                            <constraint firstItem="FWv-hW-CZC" firstAttribute="top" secondItem="QRM-L8-afL" secondAttribute="bottom" constant="65" id="8Hv-K7-GNm"/>
+                            <constraint firstItem="ifP-AI-m4O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="8br-Zs-sBW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ifP-AI-m4O" secondAttribute="bottom" constant="23" id="9cS-8z-dc1"/>
+                            <constraint firstItem="FWv-hW-CZC" firstAttribute="trailing" secondItem="ZoG-FQ-yzC" secondAttribute="trailing" id="D3E-hZ-E9f"/>
+                            <constraint firstItem="ifP-AI-m4O" firstAttribute="firstBaseline" secondItem="OrV-Fp-N07" secondAttribute="firstBaseline" id="DRE-pt-Z3X"/>
+                            <constraint firstItem="V7p-nc-ssD" firstAttribute="centerX" secondItem="VQv-Ed-C3Q" secondAttribute="centerX" id="E29-hN-Z4L"/>
+                            <constraint firstItem="OrV-Fp-N07" firstAttribute="leading" secondItem="ifP-AI-m4O" secondAttribute="trailing" constant="12" id="Mk4-7U-X8X"/>
+                            <constraint firstItem="VQv-Ed-C3Q" firstAttribute="top" secondItem="5dv-zD-HyF" secondAttribute="bottom" constant="37" id="OQX-KW-A96"/>
+                            <constraint firstItem="QRM-L8-afL" firstAttribute="trailing" secondItem="FWv-hW-CZC" secondAttribute="trailing" id="T1j-02-MD4"/>
+                            <constraint firstItem="QRM-L8-afL" firstAttribute="leading" secondItem="FWv-hW-CZC" secondAttribute="leading" id="Ube-0o-neV"/>
+                            <constraint firstItem="ZoG-FQ-yzC" firstAttribute="leading" secondItem="5dv-zD-HyF" secondAttribute="leading" id="VWb-9A-eY3"/>
+                            <constraint firstItem="FWv-hW-CZC" firstAttribute="leading" secondItem="ZoG-FQ-yzC" secondAttribute="leading" id="bHl-PD-upf"/>
+                            <constraint firstItem="ZoG-FQ-yzC" firstAttribute="trailing" secondItem="5dv-zD-HyF" secondAttribute="trailing" id="cwR-Tl-4aP"/>
+                            <constraint firstItem="5dv-zD-HyF" firstAttribute="top" secondItem="ZoG-FQ-yzC" secondAttribute="bottom" constant="33" id="eAb-8d-qp1"/>
+                            <constraint firstItem="ZoG-FQ-yzC" firstAttribute="top" secondItem="FWv-hW-CZC" secondAttribute="bottom" constant="31" id="mqb-7C-4jP"/>
+                            <constraint firstItem="QRM-L8-afL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t9V-jo-7Tw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OrV-Fp-N07" secondAttribute="trailing" constant="31" id="ulR-zG-hAW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OrV-Fp-N07" secondAttribute="bottom" constant="16" id="v4t-dA-Cf5"/>
+                            <constraint firstItem="V7p-nc-ssD" firstAttribute="top" secondItem="5dv-zD-HyF" secondAttribute="bottom" constant="31" id="xiJ-yH-IJt"/>
+                            <constraint firstItem="QRM-L8-afL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="zvO-oo-OW7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mailTextField" destination="FWv-hW-CZC" id="gcA-YK-JeG"/>
+                        <outlet property="passwordTextField" destination="5dv-zD-HyF" id="RdM-Rf-acp"/>
+                        <outlet property="usernameTextField" destination="ZoG-FQ-yzC" id="7Ak-g9-2xg"/>
+                        <segue destination="rj5-0l-z7k" kind="presentation" modalPresentationStyle="fullScreen" id="CRr-4G-Q2e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.76923076923077" y="-28.436018957345969"/>
+        </scene>
+        <!--Yükle-->
+        <scene sceneID="Spq-b4-Npa">
+            <objects>
+                <viewController id="zGR-uN-T4i" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PqC-WF-d8o">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="M3M-SH-SjX"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Yükle" image="plus" catalog="system" id="N2z-sB-Shy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPQ-GR-Uhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="276"/>
+        </scene>
+        <!--Profil -->
+        <scene sceneID="yQg-cy-Qhv">
+            <objects>
+                <viewController id="Nsg-LV-Hku" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oeE-3K-ezh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="v6q-hb-sSc"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profil " image="person.and.background.dotted" catalog="system" id="y4D-6l-qFw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttS-ST-dlu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="751"/>
+        </scene>
+        <!--Akış-->
+        <scene sceneID="5h5-LB-8dv">
+            <objects>
+                <viewController id="6oX-V3-KHn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PH2-6C-CQX">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XUM-st-gGC"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Akış" image="shared.with.you" catalog="system" id="Zvi-cR-MHR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y37-hA-uHi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1891" y="-333"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ITj-bc-8cb">
+            <objects>
+                <tabBarController id="rj5-0l-z7k" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AKn-Bn-sv8"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ySu-sg-JLI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.32549020649999999" green="0.51372551919999998" blue="0.92549026010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.34509804840000002" green="0.65098041299999998" blue="0.36078432199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6oX-V3-KHn" kind="relationship" relationship="viewControllers" id="cnv-uj-Ln2"/>
+                        <segue destination="zGR-uN-T4i" kind="relationship" relationship="viewControllers" id="99c-Ie-Ikt"/>
+                        <segue destination="Nsg-LV-Hku" kind="relationship" relationship="viewControllers" id="AHz-hn-KXC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Twf-4X-gAM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="-30"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kul-TS-r5h"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="AddUser" width="34" height="34"/>
+        <image name="GoogleButton" width="34" height="34"/>
+        <image name="person.and.background.dotted" catalog="system" width="128" height="94"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="shared.with.you" catalog="system" width="128" height="93"/>
+    </resources>
 </document>

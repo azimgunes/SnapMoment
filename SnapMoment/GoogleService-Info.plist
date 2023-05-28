@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyComOzvZBRSqNmh5hjk4DDHCyJiOsfXWj0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>233003651053</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.azimgunes.SnapMoment</string>
+	<key>PROJECT_ID</key>
+	<string>snapmoment-e8208</string>
+	<key>STORAGE_BUCKET</key>
+	<string>snapmoment-e8208.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:233003651053:ios:ea5495c9299bde0c6521e4</string>
+</dict>
+</plist>
