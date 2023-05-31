@@ -1,5 +1,5 @@
 //
-//  FeedVC.swift
+//  SnapVC.swift
 //  SnapMoment
 //
 //  Created by Azim Güneş on 31.05.2023.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class FeedVC: UIViewController {
-
+class SnapVC: UIViewController {
     
-    @IBOutlet weak var feedTableView: UITableView!
+    
+    @IBOutlet weak var timeLabel: UILabel!
     
 
     override func viewDidLoad() {

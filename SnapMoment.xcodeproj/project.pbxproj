@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4874F42A27C05A00B15CF9 /* SnapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4874F32A27C05A00B15CF9 /* SnapVC.swift */; };
+		3C4874F62A27C38900B15CF9 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4874F52A27C38900B15CF9 /* RegisterVC.swift */; };
 		3C55C8B02A27B5CC005C45EE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C8AF2A27B5CC005C45EE /* FeedVC.swift */; };
 		3C55C8B22A27B5EA005C45EE /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C8B12A27B5EA005C45EE /* UploadVC.swift */; };
 		3C55C8B42A27B60A005C45EE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C8B32A27B60A005C45EE /* ProfileVC.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C4874F32A27C05A00B15CF9 /* SnapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapVC.swift; sourceTree = "<group>"; };
+		3C4874F52A27C38900B15CF9 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		3C55C8AF2A27B5CC005C45EE /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		3C55C8B12A27B5EA005C45EE /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		3C55C8B32A27B60A005C45EE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				3C55C8B12A27B5EA005C45EE /* UploadVC.swift */,
 				3C55C8AF2A27B5CC005C45EE /* FeedVC.swift */,
 				3C55C8B32A27B60A005C45EE /* ProfileVC.swift */,
+				3C4874F32A27C05A00B15CF9 /* SnapVC.swift */,
+				3C4874F52A27C38900B15CF9 /* RegisterVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -236,9 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C55C8B42A27B60A005C45EE /* ProfileVC.swift in Sources */,
+				3C4874F62A27C38900B15CF9 /* RegisterVC.swift in Sources */,
 				3C55C8B02A27B5CC005C45EE /* FeedVC.swift in Sources */,
 				3CD819972A2146A40072B4ED /* SignInVC.swift in Sources */,
 				3CD819932A2146A40072B4ED /* AppDelegate.swift in Sources */,
+				3C4874F42A27C05A00B15CF9 /* SnapVC.swift in Sources */,
 				3C55C8B22A27B5EA005C45EE /* UploadVC.swift in Sources */,
 				3CD819952A2146A40072B4ED /* SceneDelegate.swift in Sources */,
 			);

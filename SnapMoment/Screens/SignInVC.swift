@@ -17,6 +17,9 @@ class SignInVC: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
+    @IBOutlet weak var nameImageView: UIImageView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,8 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func RegisterButton(_ sender: Any) {
+        performSegue(withIdentifier: "toRegisterVC", sender: nil)
+
     }
     
     @IBAction func GoogleButton(_ sender: Any) {

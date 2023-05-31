@@ -10,7 +10,9 @@ import UIKit
 class UploadVC: UIViewController {
 
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var shareTitleLabel: UIImageView!
+    
+    
     
     @IBOutlet weak var uploadImageView: UIImageView!
     

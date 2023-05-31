@@ -1,5 +1,5 @@
 //
-//  ProfileVC.swift
+//  RegisterVC.swift
 //  SnapMoment
 //
 //  Created by Azim Güneş on 31.05.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileVC: UIViewController {
+class RegisterVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,11 +17,7 @@ class ProfileVC: UIViewController {
     
 
 
-    @IBAction func logOutButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "toSignInVC", sender: nil)
-        
+    @IBAction func haveAccountButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "toSignInVCfromReg", sender: nil)
     }
-    
-    
-
 }
