@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileVC: UIViewController {
 
@@ -18,8 +19,14 @@ class ProfileVC: UIViewController {
 
 
     @IBAction func logOutButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "toSignInVC", sender: nil)
         
+        
+        do {
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "toSignInVC", sender: nil)
+        } catch {
+            
+        }
     }
     
     
