@@ -12,6 +12,7 @@
 		3C55C8B02A27B5CC005C45EE /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C8AF2A27B5CC005C45EE /* FeedVC.swift */; };
 		3C55C8B22A27B5EA005C45EE /* UploadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C8B12A27B5EA005C45EE /* UploadVC.swift */; };
 		3C55C8B42A27B60A005C45EE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55C8B32A27B60A005C45EE /* ProfileVC.swift */; };
+		3CA4D69D2A2933F200C3CA71 /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4D69C2A2933F200C3CA71 /* UserSingleton.swift */; };
 		3CD819932A2146A40072B4ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD819922A2146A40072B4ED /* AppDelegate.swift */; };
 		3CD819952A2146A40072B4ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD819942A2146A40072B4ED /* SceneDelegate.swift */; };
 		3CD819972A2146A40072B4ED /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD819962A2146A40072B4ED /* SignInVC.swift */; };
@@ -28,6 +29,7 @@
 		3C55C8AF2A27B5CC005C45EE /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		3C55C8B12A27B5EA005C45EE /* UploadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVC.swift; sourceTree = "<group>"; };
 		3C55C8B32A27B60A005C45EE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		3CA4D69C2A2933F200C3CA71 /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
 		3CD8198F2A2146A40072B4ED /* SnapMoment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapMoment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD819922A2146A40072B4ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CD819942A2146A40072B4ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +65,7 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		3C55C8B52A27B613005C45EE /* Screens */ = {
+		3C55C8B52A27B613005C45EE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				3CD819962A2146A40072B4ED /* SignInVC.swift */,
@@ -73,7 +75,7 @@
 				3C4874F32A27C05A00B15CF9 /* SnapVC.swift */,
 				3C4874F52A27C38900B15CF9 /* RegisterVC.swift */,
 			);
-			path = Screens;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		3C55C8B62A27B636005C45EE /* Delegates */ = {
@@ -83,6 +85,14 @@
 				3CD819942A2146A40072B4ED /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		3CA4D69B2A2933CF00C3CA71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CA4D69C2A2933F200C3CA71 /* UserSingleton.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3CD819862A2146A40072B4ED = {
@@ -106,8 +116,9 @@
 		3CD819912A2146A40072B4ED /* SnapMoment */ = {
 			isa = PBXGroup;
 			children = (
+				3CA4D69B2A2933CF00C3CA71 /* Model */,
 				3C55C8B62A27B636005C45EE /* Delegates */,
-				3C55C8B52A27B613005C45EE /* Screens */,
+				3C55C8B52A27B613005C45EE /* View Controllers */,
 				3CD819982A2146A40072B4ED /* Main.storyboard */,
 				3CD8199B2A2146A50072B4ED /* Assets.xcassets */,
 				3CD8199D2A2146A50072B4ED /* LaunchScreen.storyboard */,
@@ -243,6 +254,7 @@
 			files = (
 				3C55C8B42A27B60A005C45EE /* ProfileVC.swift in Sources */,
 				3C4874F62A27C38900B15CF9 /* RegisterVC.swift in Sources */,
+				3CA4D69D2A2933F200C3CA71 /* UserSingleton.swift in Sources */,
 				3C55C8B02A27B5CC005C45EE /* FeedVC.swift in Sources */,
 				3CD819972A2146A40072B4ED /* SignInVC.swift in Sources */,
 				3CD819932A2146A40072B4ED /* AppDelegate.swift in Sources */,

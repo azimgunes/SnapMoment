@@ -28,7 +28,6 @@ class RegisterVC: UIViewController {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SegueFunc))
         scrolImage.addGestureRecognizer(gestureRecognizer)
 
-        // Do any additional setup after loading the view.
     }
     
 
