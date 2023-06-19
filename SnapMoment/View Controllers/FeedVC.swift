@@ -7,17 +7,30 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
-class FeedVC: UIViewController {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SDWebImageManagerDelegate{
 
     
     @IBOutlet weak var feedTableView: UITableView!
     
     let fireStoreDatabase = Firestore.firestore()
+    
+    var snapArray = [Snap]()
+    var choosenSnap : Snap?
+    var timeLeft : Int?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        feedTableView.delegate = self
+        feedTableView.dataSource = self
 
+        SDWebImageManager.shared.delegate = self
+        getSnapsFromFirebase()
+        getUserInfo()
     }
     func getUserInfo (){
         fireStoreDatabase.collection("UserInfo").whereField("email", isEqualTo: Auth.auth().currentUser!.email!).getDocuments { snapshot, error in
@@ -41,4 +54,74 @@ class FeedVC: UIViewController {
         self.present(alert, animated: true)
     }
 }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return snapArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedCell
+        cell.usernameLabel.text = snapArray[indexPath.row].username
+        let transformer = SDImageResizingTransformer(size: CGSize(width: 350, height: 397), scaleMode: .aspectFit   )
+        cell.feedImageView.sd_setImage(with: URL(string: snapArray[indexPath.row].imageUrlArray[0]),placeholderImage: UIImage(named: "uploadcolorful.png"),options: SDWebImageOptions.refreshCached, context: [.imageTransformer: transformer])
+        return cell
+    }
+    
+    func getSnapsFromFirebase(){
+        fireStoreDatabase.collection("Snaps").order(by: "date", descending: true).addSnapshotListener { snapshot, error in
+            if error != nil {
+                self.makeAlert(title: "Hata!", message: error?.localizedDescription ?? "Hata!")
+            }else {
+                if snapshot?.isEmpty == false && snapshot != nil {
+                    self.snapArray.removeAll(keepingCapacity: false)
+                    for document in snapshot!.documents {
+                        
+                        let documentId = document.documentID
+                        if let username = document.get("snapOwner") as? String {
+                            if let imageUrlArray = document.get("imageUrlArray") as? [String] {
+                                if let date = document.get("date") as? Timestamp {
+                                    if let difference = Calendar.current.dateComponents([.hour], from: date.dateValue(), to: Date()).hour{
+                                        if difference >= 24 {
+                                            self.fireStoreDatabase.collection("Snaps").document(documentId).delete { error in
+                                                if error != nil {
+                                                    self.makeAlert(title: "Hata", message: error?.localizedDescription ?? "Hata")
+                                                }
+                                            }
+                                       
+                                        }
+                                        self.timeLeft = 24 - difference
+                                    }
+                                    let snap = Snap(username: username, imageUrlArray: imageUrlArray, date: date.dateValue())
+                                    self.snapArray.append(snap)
+                                }
+                                
+                            }
+                        }
+                        
+                }
+                    self.feedTableView.reloadData()
+            }
+        }
+    }
+    
+        }
+    func makeAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default)
+        alert.addAction(okButton)
+        self.present(alert, animated: true)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSnapVC" {
+            let desVC = segue.destination as! SnapVC
+                desVC.selectedSnap = choosenSnap
+                desVC.selectedTime = self.timeLeft
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        choosenSnap = self.snapArray[indexPath.row]
+        performSegue(withIdentifier: "toSnapVC", sender: nil)
+    }
     }
