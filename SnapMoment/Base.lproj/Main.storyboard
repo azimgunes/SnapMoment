@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -312,41 +313,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5JA-of-xs8">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                                <rect key="frame" x="-4" y="0.0" width="399" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="506" id="cZR-lX-Ip7" customClass="FeedCell" customModule="SnapMoment" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="506"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="460" id="cZR-lX-Ip7" customClass="FeedCell" customModule="SnapMoment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="399" height="460"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cZR-lX-Ip7" id="Cbq-67-meC">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="506"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="399" height="460"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzg-B7-k49">
-                                                    <rect key="frame" x="157" y="30" width="76" height="21"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ed9-5E-dA3">
+                                                    <rect key="frame" x="24.666666666666657" y="33" width="350" height="397"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="350" id="Viu-nu-J5T"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzg-B7-k49">
+                                                    <rect key="frame" x="161.66666666666666" y="11" width="76" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ed9-5E-dA3">
-                                                    <rect key="frame" x="20" y="55" width="350" height="397"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="350" id="0Aa-cF-KVn"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="Ed9-5E-dA3" firstAttribute="top" secondItem="vzg-B7-k49" secondAttribute="bottom" constant="4" id="3hs-uV-JOC"/>
-                                                <constraint firstItem="vzg-B7-k49" firstAttribute="top" secondItem="Cbq-67-meC" secondAttribute="topMargin" constant="19" id="B4b-X7-WcQ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ed9-5E-dA3" secondAttribute="bottom" constant="43" id="Kjb-HT-Zqm"/>
-                                                <constraint firstItem="vzg-B7-k49" firstAttribute="centerX" secondItem="Ed9-5E-dA3" secondAttribute="centerX" id="Pnq-UJ-Ds6"/>
-                                                <constraint firstItem="Ed9-5E-dA3" firstAttribute="leading" secondItem="Cbq-67-meC" secondAttribute="leadingMargin" id="St4-s6-8hv"/>
-                                                <constraint firstItem="Ed9-5E-dA3" firstAttribute="centerY" secondItem="Cbq-67-meC" secondAttribute="centerY" id="qJO-71-xKY"/>
+                                                <constraint firstItem="vzg-B7-k49" firstAttribute="centerX" secondItem="Cbq-67-meC" secondAttribute="centerX" id="MAq-Oc-5KQ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ed9-5E-dA3" secondAttribute="bottom" constant="19" id="MCB-ca-EXT"/>
+                                                <constraint firstItem="vzg-B7-k49" firstAttribute="top" secondItem="Cbq-67-meC" secondAttribute="topMargin" id="Uty-ED-dvX"/>
+                                                <constraint firstItem="vzg-B7-k49" firstAttribute="centerX" secondItem="Ed9-5E-dA3" secondAttribute="centerX" id="hWi-Vd-Fp5"/>
+                                                <constraint firstItem="Ed9-5E-dA3" firstAttribute="top" secondItem="vzg-B7-k49" secondAttribute="bottom" constant="1" id="o9b-Zg-cYf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="feedImageView" destination="Ed9-5E-dA3" id="6tr-r6-BKx"/>
                                             <outlet property="usernameLabel" destination="vzg-B7-k49" id="bq7-Q4-whd"/>
@@ -377,7 +379,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;&quot; Saat önce paylaşıldı." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkf-Os-n2m">
-                                <rect key="frame" x="75" y="47" width="240" height="57"/>
+                                <rect key="frame" x="85" y="102" width="240" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -405,7 +407,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.32549020649999999" green="0.51372551919999998" blue="0.92549026010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.34509804840000002" green="0.65098041299999998" blue="0.36078432199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
