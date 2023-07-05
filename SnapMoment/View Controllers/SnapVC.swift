@@ -15,24 +15,21 @@ class SnapVC: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     var selectedSnap : Snap?
-    var selectedTime : Int?
     var inputArray = [SDWebImageSource]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
-    
 
-        if let time = selectedTime {
-            timeLabel.text! = "\(time) Saat Sonra Kaybolacak."
-
-        }
         if let snap = selectedSnap {
+            
+            timeLabel.text = "\(snap.timeDifference) Saat sonra kaybolacak."
+            
             for imageUrl in snap.imageUrlArray {
                 inputArray.append(SDWebImageSource(urlString: imageUrl)!)
                             }
-            let imageSlideShow = ImageSlideshow(frame: CGRect(x: 10, y: 10, width: self.view.frame.width*0.95, height: self.view.frame.height*0.90 ))
+            let imageSlideShow = ImageSlideshow(frame: CGRect(x: 10, y: 10, width: self.view.frame.width*0.95, height: self.view.frame.height*0.90))
             imageSlideShow.backgroundColor = UIColor.clear
             
             let pageInd = UIPageControl()
