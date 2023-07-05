@@ -18,7 +18,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SDWe
     
     var snapArray = [Snap]()
     var choosenSnap : Snap?
-    var timeLeft : Int?
     
 
     override func viewDidLoad() {
@@ -85,14 +84,18 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SDWe
                                             self.fireStoreDatabase.collection("Snaps").document(documentId).delete { error in
                                                 if error != nil {
                                                     self.makeAlert(title: "Hata", message: error?.localizedDescription ?? "Hata")
+                                                }else {
+                                                    
                                                 }
                                             }
                                        
                                         }
-                                        self.timeLeft = 24 - difference
+                                        
+                                        print("difference: \(date.dateValue())")
+                                        let snap = Snap(username: username, imageUrlArray: imageUrlArray, date: date.dateValue(), timeDifference: 24 - difference)
+                                        self.snapArray.append(snap)
                                     }
-                                    let snap = Snap(username: username, imageUrlArray: imageUrlArray, date: date.dateValue())
-                                    self.snapArray.append(snap)
+                               
                                 }
                                 
                             }
@@ -115,7 +118,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, SDWe
         if segue.identifier == "toSnapVC" {
             let desVC = segue.destination as! SnapVC
                 desVC.selectedSnap = choosenSnap
-                desVC.selectedTime = self.timeLeft
             
         }
     }
